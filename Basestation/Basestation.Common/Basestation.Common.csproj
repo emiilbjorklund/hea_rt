@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\lphes.arrythmia.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\status.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\sdas.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\lphes.heartrate.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.11.1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.25.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.25.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ShimmerClosedLibraryRev0_5">
+      <HintPath>..\Basestation.LocalHealthEvaluation.HeartRate\lib\ShimmerClosedLibraryRev0_5.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

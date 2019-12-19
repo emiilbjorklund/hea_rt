@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"             
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MedTechClient"
+    mc:Ignorable="d"
+    x:Class="MedTechClient.AlarmPopup">
+
+
+    <ContentPage.BindingContext>
+        <local:MainVM/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout  Padding="5,5,5,5" BackgroundColor="WhiteSmoke">
+
+
+            <Label Text="ERROR"
+                  
+                    FontSize="Header"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                    />
+
+            <Frame BorderColor="Red" 
+                  
+                   Padding="2,2,2,2" 
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand">
+                <Button 
+                  BackgroundColor="Red"
+                    Text="Restart &#x0a;application"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                        
+                    />
+            </Frame>
+            <Label Text="The connection is lost"
+                   FontSize="Large"
+                   VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                 />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</pages:PopupPage>

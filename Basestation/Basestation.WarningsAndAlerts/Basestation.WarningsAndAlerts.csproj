@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basestation.Common\Basestation.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WiringPi">
+      <HintPath>lib\WiringPi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

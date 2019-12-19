@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "LocalHealthEvaluation";
+
+package LphesArrythmiaPack;
+
+// TODO !!!!
+
+/*service LphesHeartrate {
+	rpc HeartrateSubscription (HeartrateRequest) returns (stream HeartrateResponse);
+}
+
+message HeartrateRequest {
+    string id = 1;
+}
+
+message HeartrateResponse {
+	double unixTimeStamp = 1;
+    double heartrate = 2;
+}*/

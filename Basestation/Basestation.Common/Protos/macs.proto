@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "MobileAppCommunication";
+
+package MacsPack;
+
+service Macs {
+  rpc HeartrateSubscription (HeartrateRequest) returns (stream HeartrateResponse);
+}
+
+// 
+message HeartrateRequest {
+  string id = 1;
+}
+
+// The response message containing calculated heartrate
+message HeartrateResponse {
+  double heartrate = 1;
+}

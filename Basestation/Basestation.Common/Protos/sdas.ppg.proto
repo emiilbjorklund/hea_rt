@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DataAcquisition";
+
+package SdasPpgPack;
+
+service SdasPpg {
+	rpc PpgSubscription (PpgSubscriptionRequest) returns (stream PpgResponse);
+}
+
+message PpgSubscriptionRequest {
+  string id = 1;
+  bool testdatasubscription = 2;
+}
+
+message PpgResponse {
+  double samplingrate = 1;
+  double timestamp = 2;
+  double ppg = 3;
+}

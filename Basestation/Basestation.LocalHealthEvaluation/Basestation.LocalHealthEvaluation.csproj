@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basestation.Common\Basestation.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Arythmia\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Filtering" Version="0.6.0" />
+    <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ShimmerAPI">
+      <HintPath>..\Basestation.DataAcquisition\lib\ShimmerAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ShimmerClosedLibraryRev0_5">
+      <HintPath>lib\ShimmerClosedLibraryRev0_5.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

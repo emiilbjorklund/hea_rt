@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Basestation.Common\Protos\status.proto" GrpcServices="Server" />
+    <Protobuf Include="..\Basestation.Common\Protos\sdas.proto" GrpcServices="Server" />
+    <Protobuf Include="..\Basestation.Common\Protos\lphes.heartrate.proto" GrpcServices="Server" />
+    <Protobuf Include="..\Basestation.Common\Protos\was.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.25.0" />
+    <PackageReference Include="libgrpc_csharp_ext.arm7" Version="1.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basestation.Common\Basestation.Common.csproj" />
+    <ProjectReference Include="..\Basestation.DataAcquisition\Basestation.DataAcquisition.csproj" />
+    <ProjectReference Include="..\Basestation.LocalHealthEvaluation\Basestation.LocalHealthEvaluation.csproj" />
+    <ProjectReference Include="..\Basestation.MobileAppCommunication\Basestation.MobileAppCommunication.csproj" />
+    <ProjectReference Include="..\Basestation.WarningsAndAlerts\Basestation.WarningsAndAlerts.csproj" />
+  </ItemGroup>
+
+</Project>

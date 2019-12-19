@@ -1,0 +1,37 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DataAcquisition";
+
+package SdasPack;
+
+service Sdas {
+	rpc EcgSubscription (EcgSubscriptionRequest) returns (stream EcgResponse);
+	rpc PpgSubscription (PpgSubscriptionRequest) returns (stream PpgResponse);
+}
+
+
+//Requests
+message EcgSubscriptionRequest {
+  string id = 1;
+  bool testdatasubscription = 2;
+}
+
+message PpgSubscriptionRequest {
+  string id = 1;
+  bool testdatasubscription = 2;
+}
+
+//Responses
+message EcgResponse {
+  double samplingrate = 1;
+  double timestamp = 2;
+  double la_ra = 3;
+  double ll_ra = 4;
+  double vx_rl = 5;
+}
+
+message PpgResponse {
+  double samplingrate = 1;
+  double timestamp = 2;
+  double ppg = 3;
+}

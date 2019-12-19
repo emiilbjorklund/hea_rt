@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Basestation.Service": {
+      "commandName": "Project",
+      "commandLineArgs": "/port=5010 /id=63078E5A-22AC-45B8-B615-43EE9C300D53 /yml=\"../Deployment/init_conf_dev.yml\"",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5001"
+    }
+  }
+}

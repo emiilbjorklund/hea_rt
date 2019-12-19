@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "ServiceStatus";
+
+package StatusPack;
+
+service Status {
+  rpc Heartbeat (HeartbeatRequest) returns (HeartbeatResponse);
+  rpc SubscribeHeartbeat (HeartbeatRequest) returns (stream HeartbeatResponse);
+}
+
+message HeartbeatRequest {
+  string datetime = 1;
+}
+
+message HeartbeatResponse {
+  string datetime = 1;
+}

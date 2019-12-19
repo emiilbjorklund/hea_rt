@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DevLauncher": {
+      "commandName": "Project",
+      "commandLineArgs": "-y \"init_conf_dev.yml\" -w"
+    }
+  }
+}

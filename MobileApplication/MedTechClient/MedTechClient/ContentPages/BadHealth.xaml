@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MedTechClient.BadHealth">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="AliceBlue" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+                                    
+            <Frame BorderColor="CadetBlue" Padding="2,2,2,2" 
+               Grid.Row="1"  >
+                <Image
+                Source ="logotype.png"
+                   HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="100" >
+                </Image>
+            </Frame>
+            <Label 
+            Grid.Row="2"  
+            Text=""/>
+
+
+            <!--<Frame BorderColor="Red"
+                   Padding="5,5,5,5"
+                   Grid.Row="1"
+                   VerticalOptions="Center">
+
+                <Grid 
+                   >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image 
+                        Source="dead.PNG"
+                    
+                        />
+                    <Label Text="Cardiac status   "
+                       Grid.Row="0"
+                       VerticalOptions="End"
+                       HorizontalOptions="End"/>
+
+                </Grid>
+            </Frame>-->
+
+
+
+            <Label
+                Grid.Row="2"
+                Text=""/>
+
+
+           
+            <Frame BorderColor="Red"
+                   Padding="2,2,2,2" 
+                   Grid.Row="4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        
+                        VerticalOptions="StartAndExpand"
+                        Source="warning.jpg"
+                        HorizontalOptions="Center"
+
+                        Margin="10"
+                        />
+
+                    <Label 
+                         Grid.Row="1"
+                        Text="Your heart is in bad condition!  &#x0a;"
+                          FontSize="Title"
+                          VerticalOptions="CenterAndExpand" 
+                          HorizontalOptions="CenterAndExpand" />
+                </Grid>
+            </Frame>
+
+            <Label 
+                Grid.Row="5"
+                Text="" />
+
+            <Frame 
+                BorderColor="Red"
+                  Grid.Row="6" 
+                Padding="5,5,5,5"
+                HorizontalOptions="CenterAndExpand">
+
+                <Button 
+                    BackgroundColor="Red"
+                    Text="Call Doctor"
+                    
+                    FontSize="35" 
+                    Clicked="Button_Clicked">
+
+                </Button>
+
+            </Frame>
+            <Label 
+                Grid.Row="7"
+                Text="&#x0a;" />
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

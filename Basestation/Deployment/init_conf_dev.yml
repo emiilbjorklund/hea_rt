@@ -1,0 +1,211 @@
+setup:
+  basepath: /medtec/services 
+  network:
+    name: dockernet
+    subnet: 172.25.0.0/16
+  services:
+    da1:
+      id: 4CC24444-5870-4EB6-B4F2-B8120D97D785
+      active: true
+      image: n/a
+      hostname: localhost
+      port: 5000
+      capabilities:
+        - dataacquisition:
+            sensors:
+              - ecgTestData: ecgTest
+              #- ShimmerEcg: COM4
+    da2:
+      id: D1B511AF-9B2A-4C20-BA16-B0F810B0E9BB
+      active: true
+      image: n/a
+      hostname: localhost
+      port: 5001
+      capabilities:
+        - dataacquisition:
+            sensors:
+              - ppgTestData: ppgTest
+              #- ShimmerPpg: COM4
+    lhe1:
+      id: 63078E5A-22AC-45B8-B615-43EE9C300D53
+      active: true
+      image: n/a
+      hostname: localhost
+      port: 5010
+      capabilities:
+        - heartrateevaluation:
+            ecg:
+              - ecgTest
+            ppg:
+              - ppgTest
+            alerts:
+              - ID_OF_ALERTS_OR_MACS_SERVICE
+              - ANOTHER_SERVICE_ID
+        # ecg:
+        # exampleData: n/a
+        # shimmer: <macAddress>
+        # savvy: <macAddress>
+        # ppg:
+        # exampleData: n/a
+            # shimmer: <macAddress>
+    # mac1:
+    #   id: 62BD2F32-F072-4956-989F-1BA83C9FC18A
+    #   active: true
+    #   image: n/a
+    #   name: n/a
+    #   hostname: localhost
+    #   port: 5020
+    #   externalport: 80
+    #   capabilities:
+    #     - mobileappcommunication:
+    #         datasources:
+    #           - heartrate:
+    #             - 63078E5A-22AC-45B8-B615-43EE9C300D53
+            #requesttargets:
+              #- arrythmiareq:
+                #- cccccccc-0303-cccc-cccc-cccccccccccc
+            #configtargets:
+              #- somesetting:
+                #- dddddddd-0404-dddd-dddd-dddddddddddd
+    # was1:
+    #   id: 3DA3449D-9185-4106-ADB8-9B4DB278950C
+    #   active: true
+    #   image: n/a
+    #   name: n/a
+    #   hostname: localhost
+    #   port: 5030
+    #   capabilities:
+    #     - warningsandalerts:
+    #         notneeded:
+      # DA2:
+      #   id: D1B511AF-9B2A-4C20-BA16-B0F810B0E9BB
+      #   active: true
+      #   image: n/a
+      #   name: n/a
+      #   hostname: localhost
+      #   port: 5031
+      #   sensors:
+      #     ecg:
+      #       exampleData: n/a
+      #     ppg:
+      #       exampleData: n/a
+    #LocalPatientHealthEvaluation:
+    #  HR1:
+    #    id: CC80F8E9-6D0F-4807-978E-EB6DE5E3BFA7
+    #    active: true
+    #    image: n/a
+    #    name: n/a
+    #    hostname: localhost
+    #    port: 5020
+    #SystemHealthMonitor:
+    #  SHM1:
+    #    id: 5D6F284A-BE57-4082-B012-3145933B6C8F
+    #    active: true
+    #    image: n/a
+    #    name: n/a
+    #    hostname: localhost
+    #    port: 5010
+    #    monitors:
+    #      - 4CC24444-5870-4EB6-B4F2-B8120D97D785
+    #      - D1B511AF-9B2A-4C20-BA16-B0F810B0E9BB
+    #    alerts:
+    #      - DC63B028-132A-4DE6-81AB-68451CE41392
+      # SHM2:
+      #   id: 21255E6A-AF80-46B8-BAD3-797E1BCAD939
+      #   active: true
+      #   image: n/a
+      #   name: n/a
+      #   hostname: localhost
+      #   port: 5011
+      #   monitors:
+      #     - 4CC24444-5870-4EB6-B4F2-B8120D97D785
+      #     - D1B511AF-9B2A-4C20-BA16-B0F810B0E9BB
+      #   alerts:
+      #     - DC63B028-132A-4DE6-81AB-68451CE41392
+    #WarningsAndAlerts:
+    #  WAA1:
+    #    id: DC63B028-132A-4DE6-81AB-68451CE41392
+    #    active: true
+    #    image: n/a
+    #    name: n/a
+    #    hostname: localhost
+    #    port: 5040
+    #   SecondaryShmExample:
+    #     id: n/a
+    #     active: false
+    #     image: n/a
+    #     name: n/a
+    #     ip: 172.25.0.11
+    #     port: 80
+    # MobileAppCommunication:
+    #   MacsDev:
+    #     id: 62BD2F32-F072-4956-989F-1BA83C9FC18A
+    #     active: true
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5002
+    #     externalPort: 80
+    #     capabilities:
+    #       - heartrate: 8A5E9A22-4B51-4057-9488-296A58A63123
+    #       - arythmia: 
+    #   SecondaryMacsExample:
+    #     id: n/a
+    #     active: false
+    #     image: n/a
+    #     name: n/a
+    #     ip: 172.25.0.21
+    #     port: 80
+    # DataAcquisition.Shimmer:
+    #   ShimmerDev:
+    #     id: 4CC24444-5870-4EB6-B4F2-B8120D97D785
+    #     active: true
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5003
+    #     capabilities:
+    #       - ecg: <Bluetooth Mac Address>
+    #       - ppg: <Bluetooth Mac Address>
+    #   SecondaryShimmerExample:
+    #     id: n/a
+    #     active: false
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5013
+    # LocalHealthEvaluation.HeartRate:
+    #   HeartrateDev: 
+    #     id: 8A5E9A22-4B51-4057-9488-296A58A63123
+    #     active: true
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5004
+    #     sources:
+    #       - ecg: 4CC24444-5870-4EB6-B4F2-B8120D97D785
+    #       - ppg: 4CC24444-5870-4EB6-B4F2-B8120D97D785
+    # LocalHealthEvaluation.Arythmia:
+    #   ArythmiaDev:
+    #     id: F312B929-DE5E-4477-805A-9FECCCEA6FBA
+    #     active: true
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5005
+    # LocalHealthEvaluation.Falldectection:
+    #   FalldetectDev:
+    #     id:
+    #     active: false
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5006
+    # LocalHealthEvaluation.CardiacArrest:
+    #   CardiacDev:
+    #     id: 0B9BF565-3620-4CB9-A183-A00904DA4CA1
+    #     active: false
+    #     image: n/a
+    #     name: n/a
+    #     ip: localhost
+    #     port: 5007

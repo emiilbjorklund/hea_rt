@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "WarningsAndAlertsGrpc";
+
+package WasPack;
+
+service Was {
+  rpc AlarmStatus (WarningRequest) returns (WarningResponse);
+}
+
+// integer for message code 
+// OBS! shall be sorted in order of criticality, where 1 is least critcal:
+// 1   - SYS OK
+// 2   - SYS ERROR
+// 3 - ARRHYTMIA WARNING 
+// 4 - SUDDEN WARNING  
+// 5 - SYS FAILURE
+message WarningRequest {
+  int32 messageCode = 1;
+  string triggeringID = 2; // GUID of the triggering service
+}
+
+// if all ok, return the received message code
+// If not:
+// 999	- SYS failed to execute alert
+message WarningResponse {
+  int32 responseCode = 1;
+}

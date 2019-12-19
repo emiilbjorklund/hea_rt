@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="../Basestation.Common/Protos/shm.proto" Services="Client"/>
+    <Protobuf Include="../Basestation.Common/Protos/sdas.proto" Services="Client"/>
+    <Protobuf Include="../Basestation.Common/Protos/macs.proto" Services="Client"/>
+    <Protobuf Include="../Basestation.Common/Protos/status.proto" Services="Client"/>
+    <Protobuf Include="../Basestation.Common/Protos/lphes.heartrate.proto" Services="Client"/>
+    <Protobuf Include="../Basestation.Common/Protos/was.proto" Services="Client"/>
+
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.10.1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.25.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.25.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

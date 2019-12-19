@@ -1,0 +1,70 @@
+setup:
+  basepath: /medtec/services 
+  network:
+    name: dockernet 
+    subnet: 172.25.0.0/16
+  services:
+    SystemHealthMonitor:
+      Primary:
+        active: true
+        image: shm
+        containerName: shm-prim-run
+        ip: 172.25.0.10
+        port: 80
+      Secondary:
+        active: false
+        image: shm
+        containerName: shm-sec-run
+        ip: 172.25.0.11
+        port: 80
+    MobileAppCommunication:
+      Primary:
+        active: true
+        image: macs
+        containerName: macs-prim-run
+        ip: 172.25.0.20
+        port: 80
+      Secondary:
+        active: false
+        image: macs
+        containerName: macs-sec-run
+        ip: 172.25.0.21
+        port: 80
+    DataAcquisition:
+      Shimmer:
+        active: true
+        image: sdas-ecg
+        containerName: sdas-ecg-run
+        ip: 172.25.0.30
+        port: 80
+      Shimmer:
+        active: false
+        image: sdas-ecg
+        containerName: sdas-pulse-run
+        ip: 172.25.0.31
+        port: 80
+    LPHES:
+      Heartrate: 
+        active: true
+        image: lphes-hr
+        containerName: lphes-hr-run
+        ip: 172.25.0.40
+        port: 80
+      Falldetect:
+        active: true
+        image: lphes-fall
+        containerName: lphes-fall-run
+        ip: 172.25.0.41
+        port: 80
+      Arythmia:
+        active: true
+        image: lphes-aryt
+        containerName: lphes-aryt-run
+        ip: 172.25.0.42
+        port: 80
+      Cardiac:
+        active: true
+        image: lphes-cardiac
+        containerName: lphes-cardiac-run
+        ip: 172.25.0.43
+        port: 80

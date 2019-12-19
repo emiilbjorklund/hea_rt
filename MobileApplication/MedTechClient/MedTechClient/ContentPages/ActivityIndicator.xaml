@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"             
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MedTechClient"
+    mc:Ignorable="d"
+    x:Class="MedTechClient.ActivityIndicator">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Label Text="Calculating ..."
+                   FontSize="Title"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   Opacity="0.9"
+                   TextColor="Black"
+                   />-->
+            <ActivityIndicator Color="DarkSlateGray" IsRunning="true" 
+                                   HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               HeightRequest="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</pages:PopupPage>
