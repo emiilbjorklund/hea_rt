@@ -3,6 +3,9 @@
 
 ![The System](img/logotype.png)
 
+## About
+This is a student project at [Mälardalens University](https://www.mdh.se/international) (Sweden). Eight students has worked on this during a semester within the course **Project Course in Dependable Systems**. The goal is to continue this project for the years to come. The first phase uploded in this repository contains the concept phase.
+
 ## Intro
 
 This project is a multisensor platform for conducting realtime measurements of wireless sensors placed on a human body.
@@ -33,7 +36,18 @@ Documentation about the shimmerAPI can be found on their [Github repository](htt
 ### Windows and Linux
 
 ```bash
+#Clone repo
 git clone https://github.com/emiilbjorklund/hea_rt.git
-cd Basestation
-etc etc etc
+cd hea_rt
+
+#Build service executable
+cd Basestation/Basestation.Service
+dotnet build
+
+#Launch development system
+cd ../DevLauncher
+dotnet run -- -y init_conf_dev.yml
 ```
+
+### Note
+For indepth information about the project see docs.
