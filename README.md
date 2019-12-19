@@ -1,7 +1,7 @@
 # PROJECT HEA:RT
 **Health Evaluation and Awereness using Reliable Technology**
 
-![The System](img/product.jpg)
+![The System](img/logotype.png)
 
 ## Intro
 
