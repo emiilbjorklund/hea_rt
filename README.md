@@ -51,5 +51,5 @@ dotnet run -- -y init_conf_dev.yml
 
 ### Note
 The shimmerAPI for connecting to the sensors is not included in this repository but can easly be downloaded from their repository see link above.
-The library for PPG hearrate is also available on shimmers repository.
+The library for PPG heart rate is also available on shimmers repository.
 For in-depth information about the project see docs.
